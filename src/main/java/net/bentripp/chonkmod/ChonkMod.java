@@ -22,15 +22,18 @@ import java.util.stream.Collectors;
 @Mod("chonkmod")
 public class ChonkMod
 {
-    // Directly reference a log4j logger.
-    private static final Logger LOGGER = LogManager.getLogger();
-
+    public static final String MOD_ID = "chonkmod";
+    
+    public static ChonkMod instance;
+    
     public ChonkMod() {
         // Register the setup method for modloading
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         // Register the doClientStuff method for modloading
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
 
+        instance = this;
+        
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
     }
