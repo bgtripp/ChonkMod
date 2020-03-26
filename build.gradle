@@ -43,7 +43,7 @@ minecraft {
             property 'forge.logging.console.level', 'debug'
 
             mods {
-                examplemod { //Formerly examplemod
+                chonkmod { //Formerly examplemod
                     source sourceSets.main
                 }
             }
@@ -59,7 +59,7 @@ minecraft {
             property 'forge.logging.console.level', 'debug'
 
             mods {
-                example { //Formerly examplemod
+                chonkmod { //Formerly examplemod
                     source sourceSets.main
                 }
             }
@@ -77,7 +77,7 @@ minecraft {
             args '--mod', 'chonkmod', '--all', '--output', file('src/generated/resources/')
 
             mods {
-                examplemod {
+                chonkmod {
                     source sourceSets.main
                 }
             }
