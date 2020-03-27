@@ -17,6 +17,7 @@ public class ItemInit {
 	public static final Item chonk_wand = null;
 	public static final Item chonk_sword = null;
 	public static final Item chonk_glob = null;
+	public static final Item chonk_nugget = null;
 	
 	@SubscribeEvent
 	public static void registerItems(final RegistryEvent.Register<Item> event) {
@@ -24,6 +25,8 @@ public class ItemInit {
 		event.getRegistry().register(new Item(new Item.Properties().group(ChonkItemGroup.instance)).setRegistryName("chonk_wand"));
 		event.getRegistry().register(new Item(new Item.Properties().group(ChonkItemGroup.instance)).setRegistryName("chonk_sword"));
 		event.getRegistry().register(new Item(new Item.Properties().group(ChonkItemGroup.instance)).setRegistryName("chonk_glob"));
+		event.getRegistry().register(new Item(new Item.Properties().group(ChonkItemGroup.instance)).setRegistryName("chonk_nugget"));
+
 
 	}
 }
