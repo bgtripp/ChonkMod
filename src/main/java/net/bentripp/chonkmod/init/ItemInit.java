@@ -1,6 +1,7 @@
 package net.bentripp.chonkmod.init;
 
 import net.bentripp.chonkmod.ChonkMod;
+import net.bentripp.chonkmod.ChonkMod.ChonkItemGroup;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraftforge.event.RegistryEvent;
@@ -15,12 +16,14 @@ public class ItemInit {
 	
 	public static final Item chonk_wand = null;
 	public static final Item chonk_sword = null;
+	public static final Item chonk_glob = null;
 	
 	@SubscribeEvent
 	public static void registerItems(final RegistryEvent.Register<Item> event) {
 		
-		event.getRegistry().register(new Item(new Item.Properties().group(ItemGroup.MISC)).setRegistryName("chonk_wand"));
-		event.getRegistry().register(new Item(new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("chonk_sword"));
-		
+		event.getRegistry().register(new Item(new Item.Properties().group(ChonkItemGroup.instance)).setRegistryName("chonk_wand"));
+		event.getRegistry().register(new Item(new Item.Properties().group(ChonkItemGroup.instance)).setRegistryName("chonk_sword"));
+		event.getRegistry().register(new Item(new Item.Properties().group(ChonkItemGroup.instance)).setRegistryName("chonk_glob"));
+
 	}
 }

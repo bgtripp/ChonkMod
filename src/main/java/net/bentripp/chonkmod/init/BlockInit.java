@@ -1,6 +1,7 @@
 package net.bentripp.chonkmod.init;
 
 import net.bentripp.chonkmod.ChonkMod;
+import net.bentripp.chonkmod.ChonkMod.ChonkItemGroup;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
@@ -21,11 +22,11 @@ public class BlockInit {
 	
 	@SubscribeEvent
 	public static void registerBlocks(final RegistryEvent.Register<Block> event) {
-		event.getRegistry().register(new Block(Block.Properties.create(Material.CAKE).harvestTool(ToolType.AXE).hardnessAndResistance(0.7f, 15.0f).sound(SoundType.PLANT)).setRegistryName("chonk_block"));
+		event.getRegistry().register(new Block(Block.Properties.create(Material.CAKE).hardnessAndResistance(0.7f, 15.0f).sound(SoundType.PLANT)).setRegistryName("chonk_block"));
 	}
 	
 	@SubscribeEvent
 	public static void registerBlockItems(final RegistryEvent.Register<Item> event) {
-		event.getRegistry().register(new BlockItem(chonk_block, new Item.Properties().group(ItemGroup.MISC)).setRegistryName("chonk_block"));
+		event.getRegistry().register(new BlockItem(chonk_block, new Item.Properties().group(ChonkItemGroup.instance)).setRegistryName("chonk_block"));
 	}
 }
