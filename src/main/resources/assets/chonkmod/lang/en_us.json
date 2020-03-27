@@ -5,5 +5,8 @@
 	"item.chonkmod.chonk_nugget": "Chonk Nugget",
 	
 	
-	"block.chonkmod.chonk_block": "Block of Chonk"
+	"block.chonkmod.chonk_block": "Block of Chonk",
+	
+	"itemGroup.chonktab": "Chonk Mod"
+	
 }

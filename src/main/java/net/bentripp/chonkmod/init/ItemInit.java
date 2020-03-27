@@ -2,8 +2,10 @@ package net.bentripp.chonkmod.init;
 
 import net.bentripp.chonkmod.ChonkMod;
 import net.bentripp.chonkmod.ChonkMod.ChonkItemGroup;
+import net.minecraft.item.Food;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
+import net.minecraft.potion.EffectInstance;
+import net.minecraft.potion.Effects;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -25,7 +27,7 @@ public class ItemInit {
 		event.getRegistry().register(new Item(new Item.Properties().group(ChonkItemGroup.instance)).setRegistryName("chonk_wand"));
 		event.getRegistry().register(new Item(new Item.Properties().group(ChonkItemGroup.instance)).setRegistryName("chonk_sword"));
 		event.getRegistry().register(new Item(new Item.Properties().group(ChonkItemGroup.instance)).setRegistryName("chonk_glob"));
-		event.getRegistry().register(new Item(new Item.Properties().group(ChonkItemGroup.instance)).setRegistryName("chonk_nugget"));
+		event.getRegistry().register(new Item(new Item.Properties().group(ChonkItemGroup.instance).food(new Food.Builder().hunger(9).saturation(1.2f).effect(new EffectInstance(Effects.INVISIBILITY, 6000, 5),  1).build())).setRegistryName("chonk_nugget"));
 
 
 	}
